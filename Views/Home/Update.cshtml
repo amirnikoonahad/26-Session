@@ -1,0 +1,10 @@
+@model sessions.Studant
+<Form action="/home/update" method="post">
+<input asp-for="id" style="display: none">
+<input type="text" asp-for="name">
+<input type="text" asp-for="family">
+
+
+<button type="submit">Update</button>
+
+</Form>

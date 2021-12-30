@@ -1,0 +1,27 @@
+﻿@model List< sessions.Studant> 
+<Table style="width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Family</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+        <tr style="border:1px solid black;">
+        <td>@item.id</td>
+        <td>@item.name</td>
+        <td>@item.family</td>
+          <td>
+            <a class="btn btn-success" href="/home/update/@item.id">Update</a>
+        </td>
+        <td>
+            <a class="btn btn-primary" href="/home/delete/@item.id" onClick="return confirm('Are you sure?');">Delete</a>
+        </td>
+    </tr>  
+    }
+  
+</Table>
